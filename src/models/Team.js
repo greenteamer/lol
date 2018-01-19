@@ -1,4 +1,6 @@
-import { RED_TEAM, BLUE_TEAM } from './constants'
+import React from 'react'
+import { RED_TEAM, BLUE_TEAM } from '../constants'
+
 
 export default class Team {
   constructor(props) {

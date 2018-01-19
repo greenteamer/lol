@@ -3,12 +3,10 @@ import { Champion, Minion, Team, Game } from './models'
 import { RED_TEAM, BLUE_TEAM } from './constants'
 
 
-
 //Create champion
 const kain = new Champion({level: 7, name: 'Kain', imageUrl: './src/img/kayn.jpg'});
 const ash = new Champion({level: 8, name: 'Ash', imageUrl: './src/img/ash.png'});
 const dovabon = new Champion({level: 7, name: 'Dovabon', imageUrl: './src/img/dovabon.png'});
-
 const hekarim = new Champion({level: 8, name: 'Hekarim', imageUrl: './src/img/heka.jpeg'});
 const jhin = new Champion({level: 7, name: 'Jhin', imageUrl: './src/img/jhin.jpg'});
 
@@ -16,13 +14,13 @@ const jhin = new Champion({level: 7, name: 'Jhin', imageUrl: './src/img/jhin.jpg
 //Create red team
 const redTeam = new Team({
     team: RED_TEAM,
-    champions: [ hekarim, jhin ],
+    champions: [ hekarim, jhin, dovabon ],
     winImg: './src/img/reddefeat.jpg'
 })
 //Create blue team
 const blueTeam = new Team({
     team: BLUE_TEAM,
-    champions: [ kain, ash, dovabon ],
+    champions: [ kain, ash ],
     winImg: './src/img/bluedefeat.png'
 })
 
