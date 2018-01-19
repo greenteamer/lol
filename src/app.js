@@ -36,7 +36,7 @@ while (kain.isAlive() && hekarim.isAlive()) {
 
 const App = () => (
     <div>
-        {kain.view}
+        {teamWin.view}
     </div>
 )
 
