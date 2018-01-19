@@ -9,7 +9,7 @@ class Champion {
       this.imageUrl = props.imageUrl || ''
   }
 
-  punch(champ) {
+  punch(champ, minion) {
       // champ.helth = champ.helth - this.force - minion.forse;
       champ.helth = champ.helth - this.force
 
@@ -24,6 +24,8 @@ class Champion {
           // result
           console.log(this.name, ': Yahoo, I am win... gg, \n I have ', this.helth, ' HP');
           console.log(champ.name, ': Oops, I am loh..., \n I have ', champ.helth, ' HP');
+
+          minion.show()
       }
   }
 
