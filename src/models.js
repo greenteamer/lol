@@ -1,6 +1,12 @@
 import React from 'react'
 
 
+export class Team {
+  constructor(props) {
+    this.team = props.team
+  }
+}
+
 export class Champion {
 
   constructor(props) {
