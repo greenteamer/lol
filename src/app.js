@@ -1,4 +1,4 @@
-// import {Champion} from './models'
+import { Champion, Minion } from './models'
 
 const kain = new Champion({level: 7, name: 'Kain', imageUrl: './kayn.jpg'});
 const hekarim = new Champion({level: 8, name: 'Hekarim', imageUrl: './heka.jpeg'});
