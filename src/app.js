@@ -13,6 +13,8 @@ const blueTeam = new Team({team: BLUE_TEAM})
 //Create champion
 const kain = new Champion({level: 7, name: 'Kain', imageUrl: './src/img/kayn.jpg' ,team: blueTeam});
 const hekarim = new Champion({level: 8, name: 'Hekarim', imageUrl: './src/img/heka.jpeg', team: redTeam});
+const dovabon = new Champion({level: 7, name: 'Dovabon', imageUrl: './src/img/dovabon.png', team: blueTeam});
+
 
 //Create minions
 const minionRed = new Minion({level: 2, team: 'Minion red', imageUrl: './src/img/minionred.png', team: redTeam});
@@ -21,15 +23,16 @@ const minionBlue = new Minion({level: 2, team:'Minion blue', imageUrl: './src/im
 //Console
 console.log('heka helth: ', hekarim.helth);
 console.log('kain helth: ', kain.helth);
-
+console.log('dovabon helth:', dovabon.helth);
 //Methods
 while (kain.isAlive() && hekarim.isAlive()) {
     console.log('took on youre head');
     hekarim.punch(kain);
-    minionRed.punch(kain)
+    minionRed.punch(kain);
+    dovabon.punch(hekarim);
     if (kain.isAlive()) {
         kain.punch(hekarim);
-        minionRed.punch(hekarim)
+        minionRed.punch(hekarim);
     }
 }
 
