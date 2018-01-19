@@ -1,4 +1,4 @@
-class Champion {
+export class Champion {
 
   constructor(props) {
       console.log('props: ', props)
@@ -37,7 +37,7 @@ class Champion {
 }
 
 
-class Minion {
+export class Minion {
  
   constructor(props) {
     console.log('props', props)

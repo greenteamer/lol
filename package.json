@@ -1,0 +1,24 @@
+{
+  "name": "lol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greenteamer/lol.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greenteamer/lol/issues"
+  },
+  "homepage": "https://github.com/greenteamer/lol#readme"
+}
