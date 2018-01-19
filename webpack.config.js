@@ -9,6 +9,15 @@ module.exports = {
     path: __dirname + "/dist",
     filename: "bundle.js"
   },
+  module: {
+    loaders: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+    ]
+  },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
