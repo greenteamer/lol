@@ -13,7 +13,7 @@ while (kain.isAlive() && hekarim.isAlive()) {
     minionRed.punch(kain)
     if (kain.isAlive()) {
         kain.punch(hekarim);
-        minionRed.punch(hekarim)
+        minionBlue.punch(hekarim)
     }
 }
 
