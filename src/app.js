@@ -1,12 +1,26 @@
-import { Champion, Minion } from './models'
+import { Champion, Minion, Team } from './models'
 
-const kain = new Champion({level: 7, name: 'Kain', imageUrl: './kayn.jpg'});
-const hekarim = new Champion({level: 8, name: 'Hekarim', imageUrl: './heka.jpeg'});
-const minionRed = new Minion({level: 2, team: 'Minion red', imageUrl: './minionred.png'});
-const minionBlue = new Minion({level: 2, team:'Minion blue', imageUrl: './minionblue.jpg'})
+//Helpers
+const RED_TEAM = 0
+const BLUE_TEAM = 1
+
+//Create team
+const redTeam = new Team({team: RED_TEAM})
+const blueTeam = new Team({team: BLUE_TEAM})
+
+//Create champion
+const kain = new Champion({level: 7, name: 'Kain', imageUrl: './kayn.jpg',team: blueTeam});
+const hekarim = new Champion({level: 8, name: 'Hekarim', imageUrl: './heka.jpeg',team: redTeam});
+
+//Create minions
+const minionRed = new Minion({level: 2, team: 'Minion red', imageUrl: './minionred.png',team: redTeam});
+const minionBlue = new Minion({level: 2, team:'Minion blue', imageUrl: './minionblue.jpg',team: blueTeam})
+
+//Console
 console.log('heka helth: ', hekarim.helth);
 console.log('kain helth: ', kain.helth);
 
+//Methods
 while (kain.isAlive() && hekarim.isAlive()) {
     console.log('took on youre head');
     hekarim.punch(kain);

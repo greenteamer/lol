@@ -1,3 +1,8 @@
+export class Team{
+  constructor(props)
+    this.team = props.team
+}
+
 export class Champion {
 
   constructor(props) {
@@ -9,7 +14,7 @@ export class Champion {
       this.imageUrl = props.imageUrl || ''
   }
 
-  punch(champ, minion) {
+  punch(champ) {
       // champ.helth = champ.helth - this.force - minion.forse;
       champ.helth = champ.helth - this.force
 
@@ -25,7 +30,6 @@ export class Champion {
           console.log(this.name, ': Yahoo, I am win... gg, \n I have ', this.helth, ' HP');
           console.log(champ.name, ': Oops, I am loh..., \n I have ', champ.helth, ' HP');
 
-          minion.show()
       }
   }
 
