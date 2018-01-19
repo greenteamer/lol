@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export class Champion {
+export default class Champion {
 
   constructor(props) {
       console.log('props: ', props)
