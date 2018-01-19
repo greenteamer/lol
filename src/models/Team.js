@@ -1,8 +1,10 @@
+import { RED_TEAM, BLUE_TEAM } from './constants'
 
 export default class Team {
   constructor(props) {
     this.team = props.team
     this.champions = props.champions
+    this.winImg = props.winImg
   }
 
   isAlive() {
@@ -23,6 +25,14 @@ export default class Team {
     })
     console.log('aliveChampions: ', arr)
     return arr
+  }
+
+  render() {
+    return (
+      <div>
+        <img src={this.winImg} />
+      </div>
+    )
   }
 
 }

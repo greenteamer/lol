@@ -1,10 +1,8 @@
 import React from 'react'
 import { Champion, Minion, Team, Game } from './models'
+import { RED_TEAM, BLUE_TEAM } from './constants'
 
 
-//Helpers
-const RED_TEAM = 0
-const BLUE_TEAM = 1
 
 //Create champion
 const kain = new Champion({level: 7, name: 'Kain', imageUrl: './src/img/kayn.jpg'});
@@ -15,9 +13,18 @@ const hekarim = new Champion({level: 8, name: 'Hekarim', imageUrl: './src/img/he
 const jhin = new Champion({level: 7, name: 'Jhin', imageUrl: './src/img/jhin.jpg'});
 
 
-//Create team
-const redTeam = new Team({team: RED_TEAM, champions: [ hekarim, jhin ]})
-const blueTeam = new Team({team: BLUE_TEAM, champions: [ kain, ash, dovabon ]})
+//Create red team
+const redTeam = new Team({
+    team: RED_TEAM,
+    champions: [ hekarim, jhin ],
+    winImg: './src/img/reddefeat.jpg'
+})
+//Create blue team
+const blueTeam = new Team({
+    team: BLUE_TEAM,
+    champions: [ kain, ash, dovabon ],
+    winImg: './src/img/bluedefeat.png'
+})
 
 
 // Create Game
