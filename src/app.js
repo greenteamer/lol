@@ -4,6 +4,7 @@ import { RED_TEAM, BLUE_TEAM } from './constants'
 
 
 //Create champion
+const greene = new Champion({level: 8, nsme: 'Greene', imageUrl: './src/img/greene.jpg'})
 const kain = new Champion({level: 7, name: 'Kain', imageUrl: './src/img/kayn.jpg'});
 const ash = new Champion({level: 8, name: 'Ash', imageUrl: './src/img/ash.png'});
 const dovabon = new Champion({level: 7, name: 'Dovabon', imageUrl: './src/img/dovabon.png'});
