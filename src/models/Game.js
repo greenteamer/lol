@@ -13,7 +13,7 @@ export default class Game {
         this.winTeam = null
     }
 
-    run(camp) {
+    run() {
         // fight
         while (this.redTeam.isAlive() && this.blueTeam.isAlive()) {
             console.log('team fight -');
@@ -36,7 +36,9 @@ export default class Game {
 
     result() {
         return (
-            <div>{this.winTeam.render()}</div>
+            <div>
+                {this.winTeam && this.winTeam.render()}
+            </div>
         )
     }
 }

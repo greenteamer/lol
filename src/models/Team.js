@@ -32,7 +32,9 @@ export default class Team {
   render() {
     return (
       <div>
-        <img src={this.winImg} />
+        {this.winImg &&
+          <img src={this.winImg} />
+        }
       </div>
     )
   }

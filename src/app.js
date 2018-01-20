@@ -14,13 +14,13 @@ const jhin = new Champion({level: 7, name: 'Jhin', imageUrl: './src/img/jhin.jpg
 //Create red team
 const redTeam = new Team({
     team: RED_TEAM,
-    champions: [ hekarim, jhin, dovabon ],
+    champions: [ hekarim, jhin ],
     winImg: './src/img/reddefeat.jpg'
 })
 //Create blue team
 const blueTeam = new Team({
     team: BLUE_TEAM,
-    champions: [ kain, ash ],
+    champions: [ kain, ash, dovabon ],
     winImg: './src/img/bluedefeat.png'
 })
 
@@ -32,6 +32,7 @@ game.run()
 
 const App = () => (
     <div>
+        <button onClick={() => game.run()}>start game</button>
         {game.result()}
     </div>
 )
